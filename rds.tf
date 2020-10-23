@@ -8,6 +8,6 @@ resource "aws_db_instance" "default" {
   instance_class       = "db.t2.micro"
   name                 = "mydb"
   username             = "my-usr"
-  password             = "file("../my_pass.txt")
+  password             = file("../my_pass.txt")
   parameter_group_name = "default.mysql5.7"
 }
